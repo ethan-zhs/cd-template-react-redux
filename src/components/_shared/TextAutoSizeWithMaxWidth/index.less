@@ -1,0 +1,17 @@
+
+.component {
+  position: relative;
+  .hiddenPlaceholderOverHeight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  svg text::selection {
+    color: #fff;
+  }
+}
+

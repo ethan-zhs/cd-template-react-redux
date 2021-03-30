@@ -1,0 +1,113 @@
+.audio-out-div {
+    height: 70px;
+    //width: 348px;
+    max-width: 100%;
+    background: #f5f5f5;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    position: relative;
+    margin: 0 auto;
+
+    audio {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        position: absolute;
+    }
+
+    .audio-play-btn {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        margin-top: -20px;
+        margin-left: 5%;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 40px;
+        background-size: 100%;
+    }
+
+    .audio-play {
+        background-image: url('~@assets/statics/images/audio/audio_play.png');
+    }
+
+    .audio-playing {
+        background-image: url('~@assets/statics/images/audio/audio_playing.png');
+    }
+
+    .audio-msg {
+        line-height: 1em;
+        margin-left: 40px;
+        padding: 0 8% 0 10%;
+        height: 45px;
+        margin-top: 14px;
+
+        .audio-title {
+            font-size: 14px;
+            color: #282828;
+            line-height: 1em !important;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 7px;
+            font-size:14px;
+        }
+
+        .audio-time-slidebar {
+            height: 3px;
+            background: #dcdcdc;
+            margin-top: 3px;
+            margin-bottom: 7px;
+            cursor: pointer;
+            position: relative;
+
+            .audio-time-buffered,
+            .audio-time-progress {
+                height: 3px;
+                width: 0%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .audio-time-buffered {
+                background: #b6b6b6;
+            }
+
+            .audio-time-progress {
+                background: #FF463D;
+
+                .audio-time-point {
+                    position: absolute;
+                    border-radius: 50px;
+                    border: 2px solid rgba(0,0,0,0.2);
+                    width: 10px;
+                    height: 10px;
+                    background: #fff;
+                    right: -10px;
+                    top: -3px;
+                    cursor: pointer;
+
+                    &:hover {
+                        border: 2px solid rgba(0,0,0,0.1);
+                    }
+                }
+            }
+        }
+
+        .audio-time {
+            overflow: hidden;
+            font-size: 12px;
+            margin-top: 10px;
+            font-size:12px;
+            color:#8a8a8a;
+
+            .audio-js-curr-time {
+                float: left;
+            }
+
+            .audio-js-total-time {
+                float: right;
+            }
+        }
+    }
+}

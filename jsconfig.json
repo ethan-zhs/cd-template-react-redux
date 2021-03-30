@@ -1,0 +1,42 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "jsx": "react",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "lib": [
+            "esnext",
+            "dom"
+        ],
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node",
+        "module": "esnext",
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "strictNullChecks": true,
+        "noUnusedLocals": true,
+        "target": "es6",
+        "paths": {
+            "@src/*": ["src/*"],
+            "@components/*": ["src/components/*"],
+            "@containers/*": ["src/containers/*"],
+            "@constants/*": ["src/constants/*"],
+            "@models/*": ["src/models/*"],
+            "@utils/*": ["src/utils/*"],
+            "@services/*": ["src/services/*"],
+            "@assets/*": ["src/assets/*"],
+            "@store/*": ["src/store/*"],
+            "@router/*": ["src/router/*"]
+        },
+        "baseUrl": "./"
+    },
+    "include": [
+        "./src/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "build",
+        "src/utils",
+        "src/theme"
+    ]
+}

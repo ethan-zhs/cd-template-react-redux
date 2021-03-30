@@ -1,0 +1,39 @@
+@import "./variables";
+
+.modal-base {
+  @padding: 25px;
+
+  :global {
+    .ant-modal-body {
+      padding: 0;
+    }
+
+    .ant-modal-footer {
+      padding-top: @padding;
+      border-top: 1px solid rgba(236,236,236,1);
+    }
+  }
+
+  .header-modal-base {
+    border-bottom: 1px solid rgba(236,236,236,1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: @padding - 5px @padding;
+  }
+
+  .content-modal-base {
+    padding: @padding;
+  }
+
+  .close-modal-base {
+    font-size: 23px;
+    line-height: 21px;
+    cursor: pointer;
+    transition: color 300ms ease;
+    &:hover {
+      color: @color-primary;
+    }
+  }
+}

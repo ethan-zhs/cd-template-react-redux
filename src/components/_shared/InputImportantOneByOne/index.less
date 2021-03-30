@@ -1,0 +1,67 @@
+@import "../../../assets/css/variables";
+
+.component {
+  position: relative;
+
+  .content-component {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @font-size: 28px;
+
+    .item {
+      position: relative;
+      padding: 12px;
+      border-radius:8px;
+      border:1px solid #F0F0F0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      input {
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .value-item {
+        font-size: @font-size;
+        font-weight: bold;
+        height: @font-size;
+        line-height: @font-size;
+        width: @font-size * 20 / 32;
+        text-align: center;
+      }
+
+      &.isFocusing {
+        border-color: @color-primary;
+
+        &:not(.hasValue) {
+          .value-item:after {
+            content: '';
+            width: 2px;
+            height: @font-size;
+            background: currentColor;
+            opacity: 0;
+            display: inline-block;
+            animation: blink 0.42s linear infinite alternate;
+          }
+        }
+
+        @keyframes blink {
+          50% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

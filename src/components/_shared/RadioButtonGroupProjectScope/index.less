@@ -1,0 +1,49 @@
+@import "../../../assets/css/variables";
+
+@duration: 200ms;
+
+.component {
+  border: 1px solid #d9d9d9; // #ECECEC;
+  border-radius: @border-radius-panel;
+  padding: 2px;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  .selectedBackgroundBoxWrapper {
+    position: absolute;
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    width: 1px;
+    height: 1px;
+    transition: opacity @duration ease, transform @duration ease;
+    .selectedBackgroundBox {
+      transition: width @duration ease, height @duration ease, margin @duration ease;
+      position: absolute;
+      border-radius: @border-radius-panel;
+      background-color: @color-primary;
+      flex-shrink: 0;
+    }
+  }
+
+  .options {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    .item {
+      user-select: none;
+      padding: 3px 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color @duration ease;
+    }
+    .item.selected {
+      color: #f0f0f0;
+    }
+  }
+}
+

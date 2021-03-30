@@ -1,0 +1,45 @@
+@import "../../../assets/css/variables";
+
+@duration: 200ms;
+
+.component {
+  position: relative;
+
+  .options {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 12px;
+    //padding: 12px 0;
+    .item {
+      user-select: none;
+      padding: 3px 8px;
+      cursor: pointer;
+      transition: color @duration ease;
+    }
+    .item.selected {
+      font-weight: bold;
+    }
+  }
+
+  .selectedBottomMarkerWrapper {
+    position: absolute;
+    bottom: 0;
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    width: 1px;
+    height: 1px;
+    transition: opacity @duration ease, transform @duration ease;
+
+    .selectedBottomMarker {
+      transition: width @duration ease, margin @duration ease;
+      position: absolute;
+      bottom: 0;
+      height: 3px;
+      background-color: @color-primary;
+    }
+  }
+}

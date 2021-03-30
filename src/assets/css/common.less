@@ -1,0 +1,265 @@
+@import "../../assets/css/variables";
+@import "./common-btn";
+
+.page-as-panel-base {
+  .header-panel-base {
+    line-height: 24px;
+    padding: 29px 0 20px 40px;
+    &.flex-horizontal {
+      padding: 29px 40px 20px 40px;
+    }
+  }
+
+  .content-row-panel-base {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.page-as-panel-base,
+.panel-base {
+  background:rgba(255,255,255,1);
+  border-radius:8px;
+  display: flex;
+  flex-direction: column;
+  .flex-horizontal {
+    flex-direction: row;
+  }
+}
+
+.header-panel-base {
+  padding: 15px 26px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #F0F0F2;
+}
+
+.content-row-panel-base {
+  padding: 0 26px;
+  padding-bottom: 26px;
+}
+
+.clickable {
+  cursor: pointer;
+  &:hover {
+    color: @color-primary;
+  }
+}
+
+.clickable-blue {
+  cursor: pointer;
+  &:hover {
+    color: #4a90e2;
+  }
+}
+
+.flex-horizontal {
+  display: flex;
+  flex-direction: row;
+  & > .flex-vertical:not(:last-child),
+  & > .panel-base:not(:last-child) {
+    margin-right: @gutter-root-layout;
+  }
+  &.align-center {
+    align-items: center;
+  }
+  &.justify-center {
+    justify-content: center;
+  }
+  &.justify-space-between {
+    justify-content: space-between;
+  }
+}
+
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+  & > .panel-base:not(:last-child) {
+    margin-bottom: @gutter-root-layout;
+  }
+  &.align-center {
+    align-items: center;
+  }
+  &.justify-center {
+    justify-content: center;
+  }
+
+  .align-self-stretch {
+    align-self: stretch;
+  }
+}
+
+.fill {
+  flex: 1 1 auto;
+  & > .fill {
+    //height: 100%;
+    //align-self: stretch;
+  }
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.relative {
+  position: relative;
+}
+
+.relative-fill {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.absolute {
+  position: absolute !important;
+}
+
+.absolute-fill {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  &.overflow-hidden {
+    overflow: hidden;
+  }
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 100%;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  max-height: 100%;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+  max-height: 100%;
+}
+
+.overflow-y-scroll {
+  overflow: scroll;
+  overflow-x: hidden;
+  max-height: 100%;
+}
+
+.overflow-scroll,
+.overflow-x-scroll,
+.overflow-y-scroll {
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+    height: 7px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .3);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .3);
+  }
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.affix {
+  background-color: #fff; // rgba(255, 255, 255,0.89);//#fff;
+
+  :global {
+    .ant-affix {
+      background-color: #fff;
+      box-shadow:0px -8px 6px -8px rgba(229,233,242,0.6);
+    }
+  }
+}
+
+.table-head {
+  font-size: 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+  color: #343c46;
+  background: #f0f3f8;
+  border-radius: 8px 8px 0 0;
+  padding: 5px 20px;
+
+  .table-head-title {
+    font-size: 12px;
+    //padding: 0 20px;
+  }
+
+  .fill {
+    flex: 1 1 auto;
+  }
+
+  .table-head-btns-group {
+    padding-right: 10px;
+  }
+}
+
+.table-head + .table{
+  :global(.ant-table) {
+    table {
+      border-radius: 0;
+    }
+  }
+  table, thead {
+    border-radius: 0;
+  }
+  thead:not(.noop) th:not(.noop) {
+    border-radius: 0;
+  }
+}
+
+.table {
+  :global {
+    .ant-table-thead > tr > th {
+      font-weight: normal;
+      color: #999;
+    }
+  }
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-1-1-auto {
+  flex: 1 1 auto;
+}
+
+.color-primary {
+  color: @color-primary;
+}
+
+.color-red {
+  color: @color-red;
+}
+
+.color-gray {
+  color: #ccc;
+}
+
+.color-green {
+  color: #2ecc71;
+}
+
+.color-orange {
+  color: #e67e22;
+}

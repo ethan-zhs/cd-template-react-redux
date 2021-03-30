@@ -1,0 +1,65 @@
+.modal-fusion-content {
+  min-height: 500px;
+  max-height: 660px;
+  display: flex;
+  flex-direction: column;
+
+  & > :global(.ant-spin-container) {
+    //justify-self: stretch;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: visible !important;
+  }
+
+  .modal-title {
+    font-weight: bold;
+    color: #333333;
+    font-size: 18px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .modal-meta {
+    color: #CDCDCD;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+
+    padding-right: 96px;
+
+    .media-name {
+      max-width: 90px;
+      display: inline-block;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      vertical-align: bottom;
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .text-quote-mark {
+    background: #f3f4f5;
+    //border-left: 1px solid #ccc;
+    margin: 5px 0;
+    padding: 10px 7px 10px 16px;
+    color: #8a8a8a !important;
+
+    .text-quote-mark-source {
+      font-size: 12px;
+      text-align: right;
+
+      &:before {
+        content: '------';
+        display: inline-block;
+        padding-right: 5px;
+      }
+    }
+  }
+}
